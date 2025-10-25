@@ -1,13 +1,19 @@
 {
-  "name": "Police Car Detector NCNN",
+  "name": "Police Car Detector",
   "description": "YOLOv9 NCNN model for detecting police vehicles",
   "version": "1.0.0",
   "type": "ncnn",
-  "classes": ["Normal-Cars", "Police_Car"],
-  "input_size": [320, 320],
-  "format": "ncnn",
-  "model_param": "model.param",
-  "model_bin": "model.bin",
-  "confidence_threshold": 0.5,
-  "iou_threshold": 0.45
+  "classes": {
+    "0": "Normal-Cars",
+    "1": "Police_Car"
+  },
+  "input": {
+    "width": 320,
+    "height": 320
+  },
+  "files": {
+    "param": "model.param",
+    "bin": "model.bin"
+  },
+  "labelFile": "labels.txt"
 }
